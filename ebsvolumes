@@ -1,0 +1,20 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  } 
+}
+resource "aws_ebs_volume" "example" {
+  availability_zone = "eu-west-2a"
+  size              = 400
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+
+
+ 
